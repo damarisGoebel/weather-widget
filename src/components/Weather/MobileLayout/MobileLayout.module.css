@@ -1,0 +1,48 @@
+.weatherInfo {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  margin-left: 4px;
+  align-items: center;
+}
+
+.temperature {
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.description,
+.name {
+  font-size: var(--z-ds-fontsize-14);
+  font-weight: normal;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.expandMore {
+  cursor: pointer;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.description {
+  color: var(--z-color-kicker);
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  vertical-align: top;
+}
+.search {
+  cursor: pointer;
+  margin-left: 4px;
+}

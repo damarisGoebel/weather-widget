@@ -1,13 +1,178 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eef0f3;
+  font-family: "TabletGothic", "Helvetica Neue", Helvetica, Arial, FreeSans,
+    sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  color-scheme: light dark;
+  --z-color-scheme: light;
+  --z-background-primary: #fff;
+  --z-background-primary--rgb: 255, 255, 255;
+  --z-background-95: #f9f9f9;
+  --z-background-95--rgb: 249, 249, 249;
+  --z-background-90: #eeeef0;
+  --z-background-90--rgb: 238, 238, 240;
+  --z-background-module: #f0eeec;
+  --z-background-85: #dfdfe1;
+  --z-background-35: #535560;
+  --z-background-30: #44444c;
+  --z-background-20: #33333c;
+  --z-background-15: #252525;
+  --z-background-15--rgb: 37, 37, 37;
+  --z-background-body: #41464d;
+  --z-background-body--rgb: 65, 70, 77;
+  --z-background-header: #fff;
+  --z-background-footer: #252525;
+  --z-background-ad: #fafaf3;
+  --z-background-zplus: #b91109;
+  --z-background-register: #69696c;
+  --z-background-copy-pill: #3db263;
+  --z-color-primary: #252525;
+  --z-color-primary--rgb: 37, 37, 37;
+  --z-color-20: #33333c;
+  --z-color-30: #44444c;
+  --z-color-35: #535560;
+  --z-color-45: #69696c;
+  --z-color-45--rgb: 105, 105, 108;
+  --z-color-60--beyond: #99999c;
+  --z-color-60: #99999c;
+  --z-color-70: #aaaaac;
+  --z-color-80: #cccccf;
+  --z-color-90: #eeeef0;
+  --z-color-100: #fff;
+  --z-color-link: #252525;
+  --z-color-link--rgb: 37, 37, 37;
+  --z-color-link-hover: #b91109;
+  --z-color-link-hover--rgb: 185, 17, 9;
+  --z-color-body: #fff;
+  --z-color-header: #000;
+  --z-color-footer: #cccccf;
+  --z-color-kicker: #b91109;
+  --z-color-title: #252525;
+  --z-color-alert: #b91109;
+  --z-color-logo: #1d1d1b;
+  --z-border-primary: #cccccf;
+  --z-border-50: #77777c;
+  --z-border-60: #99999c;
+  --z-border-90: #eeeef0;
+  --z-border-header: #cccccf;
+  --z-border-footer: #77777c;
+  --zon-background-yellow: #ffe246;
+  --zon-background-yellow--rgb: 255, 226, 70;
+  --zon-background-bookmarks: #085064;
+  --zon-background-podcast: #cce8e9;
+  --zett-color-kicker: #df3600;
+  --zett-color-logo: #ff5500;
+  --z-background-lighter: var(--z-background-95);
+  --z-background-lighter--rgb: var(--z-background-95--rgb);
+  --z-background-light: var(--z-background-90);
+  --z-background-light--rgb: var(--z-background-90--rgb);
+  --z-background-cararra: var(--z-background-module);
+  --z-background-iron: var(--z-background-85);
+  --z-background-dark: var(--z-background-20);
+  --z-background-darker: var(--z-background-15);
+  --z-color-dark: var(--z-color-30);
+  --z-color-light: var(--z-color-45);
+  --z-color-light--rgb: var(--z-color-45--rgb);
+  --z-color-lighter: var(--z-color-60--beyond);
+  --z-gap: 0.875rem;
+  --z-ds-color-general-black-100: #000;
+  --z-ds-color-general-black-80: rgba(0, 0, 0, 0.8);
+  --z-ds-color-general-black-60: rgba(0, 0, 0, 0.6);
+  --z-ds-color-general-black-40: rgba(0, 0, 0, 0.4);
+  --z-ds-color-general-white-0: #fff;
+  --z-ds-color-general-white-20: rgba(255, 255, 255, 0.8);
+  --z-ds-color-general-white-40: rgba(255, 255, 255, 0.6);
+  --z-ds-color-background-0: #fff;
+  --z-ds-color-background-10: #eee;
+  --z-ds-color-background-10--rgb: 235, 235, 235;
+  --z-ds-color-background-20: #dfdfe1;
+  --z-ds-color-text-100: #252525;
+  --z-ds-color-text-70: #444;
+  --z-ds-color-text-55: #69696c;
+  --z-ds-color-text-40: #999;
+  --z-ds-color-accent-100: #b91109;
+  --z-ds-color-accent-70: #880d07;
+  --z-ds-color-error-70: #bf4040;
+  --z-ds-color-warning-0: #ffe246;
+  --z-ds-color-focus-100: #005fcc;
+  --z-ds-color-border-100: #cccccf;
+  --z-ds-color-border-70: #e4e4e4;
+  --z-ds-color-border-hover: var(--z-ds-color-text-70);
+  --z-ds-fontsize-12: 0.75rem;
+  --z-ds-fontsize-14: 0.875rem;
+  --z-ds-fontsize-16: 1rem;
+  --z-ds-fontsize-20: 1.25rem;
+  --z-ds-fontsize-22: 1.375rem;
+  --z-ds-fontsize-24: 1.5rem;
+  --z-ds-fontsize-26: 1.625rem;
+  --z-ds-lineheight-10: 1;
+  --z-ds-lineheight-12: 1.2;
+  --z-ds-lineheight-15: 1.5;
+  --z-ds-letter-spacing-1: 0.02em;
+  --z-ds-space-0: 0;
+  --z-ds-space-4: 0.25rem;
+  --z-ds-space-6: 0.375rem;
+  --z-ds-space-8: 0.5rem;
+  --z-ds-space-10: 0.625rem;
+  --z-ds-space-12: 0.75rem;
+  --z-ds-space-14: 0.875rem;
+  --z-ds-space-16: 1rem;
+  --z-ds-space-20: 1.25rem;
+  --z-ds-space-24: 1.5rem;
+  --z-ds-space-32: 2rem;
+  --z-ds-border-radius-1: 0.25rem;
+  --z-ds-boxshadow-base: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
 }
+
+a {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--z-color-link);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Dark Mode Styles */
+
+[data-theme="dark"] body {
+  background-color: var(--z-background-darker);
+}
+
+
+

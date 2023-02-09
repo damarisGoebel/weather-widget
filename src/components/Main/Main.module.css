@@ -1,0 +1,94 @@
+.header {
+  background-color: var(--z-background-20);
+  color: var(--z-color-100);
+  overflow: hidden;
+  position: relative;
+}
+
+.headerContainer {
+  height: 12.5rem;
+  position: relative;
+}
+
+.headerImage {
+  min-height: 100%;
+  width: 100%;
+}
+
+.headerHeadline {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 1em;
+  margin: 0;
+  padding: 0 1.25rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  display: block;
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.markup {
+  background-color: var(--z-background-primary);
+  border-bottom-width: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: none;
+  font-family: "FranziskaWebPro", Georgia, Palatino, "Palatino Linotype",
+    FreeSerif, serif;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 1.25rem 0.875rem;
+  position: relative;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+[data-theme="dark"] .markup {
+  background-color: var(--z-background-darker);
+  color: var(--z-color-100);
+}
+
+[data-theme="dark"] .link {
+  color: var(--z-color-80);
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .link:visited,
+.link:hover {
+  color: var(--z-color-kicker);
+}
+
+.markupText {
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: max-height 0.5s linear;
+  transition: max-height 0.5s linear;
+}
+
+.markup ul li {
+  margin: 0.75em 0 0.75em 1.125em;
+  padding: 0;
+  position: relative;
+}
+
+@media screen and (min-width: 30em) {
+  .headerHeadline {
+    font-size: 2.625rem;
+  }
+  .markup {
+    font-size: 1.25em;
+  }
+}
+
+
